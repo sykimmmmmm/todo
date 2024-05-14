@@ -1,7 +1,7 @@
 const expressRateLimit = require('express-rate-limit')
 
 const limitUsage = expressRateLimit({
-    windowMs: 60 * 1000, // 1분 (ms)
+    windowMs: 1 * 60 * 1000, // 1분 (ms)
     max: 100, //분당 최대 사용횟수
     handler(req,res){
         res.status(429).json({
